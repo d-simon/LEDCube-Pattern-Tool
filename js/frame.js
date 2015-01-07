@@ -87,8 +87,6 @@ Frame.prototype.toCode = function (depthBeforeHeight) {
   var i; // X-position
   var j; // Y-position
   var k; // Z-position
-  // Add leading curly brace
-  str = str + " { ";
   
   if (depthBeforeHeight === true) {
     // Height is most significant element
@@ -131,10 +129,10 @@ Frame.prototype.toCode = function (depthBeforeHeight) {
     }
   }
   
-  // Add duration, ending curly brace, comma, and newline.
+  // Add duration, comma, and newline.
   // Comma is okay even for the last frame because there'll
   // need to be a dummy item at the end
-  str = str + (this.duration * 10).toString() + " }, \n";
+  str = str + (this.duration).toString() + ", \n";
   
   return str;
 };

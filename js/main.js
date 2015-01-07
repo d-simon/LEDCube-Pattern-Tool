@@ -540,7 +540,7 @@ codeString = codeString + " ";
 // element is going to represent a single row, we know
 // that we'll have height*depth elements.
 for (i = 0; i < globals.cubeHeight * globals.cubeDepth; i += 1) {
-  codeString = codeString + ", ";
+  codeString = codeString + "0, ";
 }
 
 // Add closing duration/brackets/etc
