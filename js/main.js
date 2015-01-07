@@ -534,17 +534,17 @@ for (i = 0; i < globals.frameCollection.length; i += 1) {
 }
 
 // Add dummy element at end
-codeString = codeString + " { ";
+codeString = codeString + " ";
 
 // Add 0s for all of the elements.  Assuming that each
 // element is going to represent a single row, we know
 // that we'll have height*depth elements.
 for (i = 0; i < globals.cubeHeight * globals.cubeDepth; i += 1) {
-  codeString = codeString + "0, ";
+  codeString = codeString + ", ";
 }
 
 // Add closing duration/brackets/etc
-codeString = codeString + "0 },\n};";
+codeString = codeString + ",\n};";
 
 // And set for the textarea!
 $("#genCode").val(codeString);
